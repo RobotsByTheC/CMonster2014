@@ -123,18 +123,18 @@ public class ArcadeDriveAlgorithm extends DriveAlgorithm {
         if (moveValue > 0.0) {
             if (rotateValue > 0.0) {
                 leftMotorSpeed = moveValue - rotateValue;
-                rightMotorSpeed = Math.max(moveValue, rotateValue);
+                rightMotorSpeed = Math.max(moveValue, -rotateValue);
             } else {
-                leftMotorSpeed = Math.max(moveValue, -rotateValue);
+                leftMotorSpeed = Math.max(moveValue, rotateValue);
                 rightMotorSpeed = moveValue + rotateValue;
             }
         } else {
             if (rotateValue > 0.0) {
-                leftMotorSpeed = -Math.max(-moveValue, rotateValue);
+                leftMotorSpeed = -Math.max(-moveValue, -rotateValue);
                 rightMotorSpeed = moveValue + rotateValue;
             } else {
                 leftMotorSpeed = moveValue - rotateValue;
-                rightMotorSpeed = -Math.max(-moveValue, -rotateValue);
+                rightMotorSpeed = -Math.max(-moveValue, rotateValue);
             }
         }
 
