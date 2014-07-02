@@ -77,7 +77,7 @@ public class OI {
         sweeperSweepButton.whenPressed(new SweeperSweepCommand());
         driveJoystick = new Joystick(1);
 
-        cruiseCancelButton = new JoystickButton(driveJoystick, 3);
+        cruiseCancelButton = new JoystickButton(driveJoystick, 2);
         cruiseCancelButton.whenPressed(new DriveCommand());
         cruiseSetButton = new JoystickButton(driveJoystick, 1);
         cruiseSetButton.whenPressed(new CruiseCommand());
